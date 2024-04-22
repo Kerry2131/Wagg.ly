@@ -1,0 +1,33 @@
+<html lang="en">
+  <%- include('../partials/head.ejs')  %>
+<body>
+
+    <%- include('../partials/nav.ejs')  %>
+
+    <div class="Dogs">
+        <h2>All Dogs</h2>
+
+
+    <% if (dogs.length > 0) { %>
+        <% dogs.forEach(dogs => { %>
+          <a class="single" href="/dogs/<%= dogs._id %>">
+  
+            <h3 class="name"> Name: <%= dogs.name %></h3>
+            <h4 class="age"> Age: <%= dogs.age %></h4>
+            <h4 class="breed"> Breed: <%= dogs.breed %></h4>
+            <p class="aboutme"> About Me: <%= dogs.aboutme %></p>
+          </a>
+
+  
+        <% }) %>
+      <% } else { %>
+        <p>There are no dogs to display...</p>
+      <% } %>
+
+
+    </div>
+
+    <%- include('../partials/footer.ejs')  %>
+    
+</body>
+</html>

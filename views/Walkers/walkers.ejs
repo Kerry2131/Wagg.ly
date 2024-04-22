@@ -1,0 +1,32 @@
+<html lang="en">
+  <%- include('../partials/head.ejs')  %>
+<body>
+
+    <%- include('../partials/nav.ejs')  %>
+
+    <div class="Walkers">
+        <h2>All Walkers</h2>
+
+
+    <% if (walkers.length > 0) { %>
+        <% walkers.forEach(walkers => { %>
+          <a class="single" href="/walkers/<%= walkers._id %>">
+  
+            <h3 class="name">Name: <%=walkers.name %></h3>
+            <h4 class="contact"> Contact Number: <%= walkers.contact %></h4>
+            <h4 class="location">Location: <%= walkers.location %></h4>
+            <p class="aboutme">About Me: <%= walkers.aboutme %></p>
+          </a>
+
+  
+        <% }) %>
+      <% } else { %>
+        <p>There are no walkers to display...</p>
+      <% } %>
+
+    </div>
+
+    <%- include('../partials/footer.ejs')  %>
+    
+</body>
+</html>

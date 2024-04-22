@@ -1,0 +1,26 @@
+<html lang="en">
+  <%- include('../partials/head.ejs')  %>
+<body>
+    
+    <%- include('../partials/nav.ejs')  %>
+
+    <div class="create content">
+        <form action="/walkers" method="post">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+          <label for="contact">Contact Number:</label>
+          <input type="text" id="contact" name="contact" required>
+          <label for="location">Location:</label>
+          <input type="text" id="location" name="location" required>
+          <label for="aboutme">About Me:</label>
+          <textarea id="aboutme" name="aboutme" required></textarea>
+          <button>Submit</button>
+        </form>
+      </div>
+
+    </div>
+
+    <%- include('../partials/footer.ejs')  %>
+    
+</body>
+</html>

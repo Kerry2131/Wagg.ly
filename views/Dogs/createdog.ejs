@@ -1,0 +1,25 @@
+<html lang="en">
+  <%- include('../partials/head.ejs')  %>
+<body>
+
+    <%- include('../partials/nav.ejs')  %>
+
+    
+    <div class="create content">
+        <form action="/dogs" method="post">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+          <label for="age">Age:</label>
+          <input type="text" id="age" name="age" required>
+          <label for="breed">Breed:</label>
+          <input type="text" id="breed" name="breed" required>
+          <label for="aboutme">About Me:</label>
+          <textarea id="aboutme" name="aboutme" required></textarea>
+          <button>Submit</button>
+        </form>
+      </div>
+
+      <%- include('../partials/footer.ejs')  %>
+      
+</body>
+</html>
