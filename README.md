@@ -16,3 +16,9 @@ To then start the app please use the following code and hit enter:
 npm run start
 
 ```
+To access via the PaaS service on azure visit: 
+
+```
+https://waggly-dogs.azurewebsites.net/
+
+```
